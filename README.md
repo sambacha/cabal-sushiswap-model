@@ -1,17 +1,22 @@
 # `@contractshark/econometric-simulator`
 
-
-## Usage 
+## Usage
 
 ```bash
-npx babel-node sims/basic-exchange.js
+yarn run sim
 ```
 
-## Notes 
+#### Simulations
 
+- Simulation 1: Standard Exchange process
 
-## Disclaimer 
+- Simulation 2: Basic Arbitrage result
 
+- Simulation 3: Optimal Arbtrage result
+
+## Notes
+
+## Disclaimer
 
 ## License
 
