@@ -84,7 +84,9 @@ const { ethOutputAmount: uniswapEthOutput } = depositToken({
 });
 
 console.log(
-  `=> Net profit ${(uniswapEthOutput - sushiswapEthInput).toString().yellow} ETH`
+  `=> Net profit ${
+    (uniswapEthOutput - sushiswapEthInput).toString().yellow
+  } ETH`
 );
 console.log("");
 

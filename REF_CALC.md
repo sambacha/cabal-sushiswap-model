@@ -2,7 +2,6 @@ Given: exchage rates different for pool1 and poo2
 Assume: tkn price higher in pool1
 Todo: buy tkn from pool2 and sell them in pool1 till both exchange rates are same
 
-
 e1 = oldEthBalance_pool1
 t1 = oldTknBalance_pool1
 
@@ -13,31 +12,26 @@ x = tknWithdrawn_pool2 = tknDeposited_pool1
 y1 = ethWithdrawn_pool1
 y2 = ethDeposited_pool2 ----------------------------- (find)
 
-
 final exchage rate should be same for both pools after arb
 (e1 - y1) / (t1 + x) = (e2 + y2) / (t2 - x) ----------------------------- (1)
 
-
 relation between y1, x
 ethWithdrawn = oldEthBalance - newEthBalance
-             = oldEthBalance - productConst / newTknBalance
-             = oldEthBalance - (oldEthBalance * oldTknBalance) / (oldTknBalance + tknDeposited)
-y1 = e1 - (e1 * t1) / (t1 + x) ----------------------------- (2)
-
+= oldEthBalance - productConst / newTknBalance
+= oldEthBalance - (oldEthBalance _ oldTknBalance) / (oldTknBalance + tknDeposited)
+y1 = e1 - (e1 _ t1) / (t1 + x) ----------------------------- (2)
 
 relation between y2, x
 tknWithdrawn = oldTknBalance - newTknBalance
-               = oldTknBalance - productConst / newEthBalance
-               = oldTknBalance - (oldEthBalance * oldTknBalance) / (oldEthBalance + ethDeposited)
-x = t2 - (e2 * t2) / (e2 + y2) ----------------------------- (3)
-
+= oldTknBalance - productConst / newEthBalance
+= oldTknBalance - (oldEthBalance _ oldTknBalance) / (oldEthBalance + ethDeposited)
+x = t2 - (e2 _ t2) / (e2 + y2) ----------------------------- (3)
 
 solving (1), (2), (3) for variables x, y1, y2
 y2 = [sqrt(e1 * t1 * e2 * t2) - (t1 * e2)] / (t1 + t2)
 
+Arb execution:
 
-Arb execution: 
-  1. Deposit y2 eth in pool2 to get x tokens
-  2. Deposit x tokens in pool1 to get y1 eth
-  3. (y1 - y2) is the net profit in eth
-  
+1. Deposit y2 eth in pool2 to get x tokens
+2. Deposit x tokens in pool1 to get y1 eth
+3. (y1 - y2) is the net profit in eth

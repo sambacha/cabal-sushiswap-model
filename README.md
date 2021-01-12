@@ -1,10 +1,19 @@
-# `@contractshark/econometric-simulator`
+# Cabal Arbitrage 
+
+> SushiSwap Validation - Very Basic
+
+## Install 
+
+run the `./install.sh` script for OSX/Linux/BSD
 
 ## Usage
 
 ```bash
 yarn run sim
 ```
+
+You can also access available commands via `yarn run` 
+
 
 #### Simulations
 
