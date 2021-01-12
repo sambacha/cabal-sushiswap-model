@@ -1,0 +1,21 @@
+{
+  "name": "@contractshark/cabal-simulations-sushiswap",
+  "version": "1.0.0",
+  "description": "econometric simluations ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6"
+  },
+  "dependencies": {
+    "colors": "1.4.0"
+  }
+}
