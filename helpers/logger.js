@@ -3,16 +3,16 @@ import colors from 'colors';
 export const logPoolState = (pool) => {
   console.log(`    ${pool.name} Details`[pool.color || 'reset'])
   console.log('        ETH balance:', pool.ethBalance)
-  console.log('        TKN balance:', pool.tokenBalance)
-  console.log('        TKN price:', pool.tokenRate, 'ETH')
-  console.log('        ETH price:', pool.ethRate, 'TKN')
+  console.log('        IFY balance:', pool.tokenBalance)
+  console.log('        IFY price:', pool.tokenRate, 'ETH')
+  console.log('        ETH price:', pool.ethRate, 'IFY')
   console.log('')
 }
 
 export const logUserState = (user) => {
   console.log(`    ${user.name} Details`[user.color || 'reset'])
   console.log('        ETH balance:', user.ethBalance)
-  console.log('        TKN balance:', user.tokenBalance)
+  console.log('        IFY balance:', user.tokenBalance)
   console.log('')
 }
 

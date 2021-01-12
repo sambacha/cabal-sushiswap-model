@@ -39,23 +39,23 @@ const pro = {
 const logState = () => {
   console.log('    Uniswap Details')
   console.log('        ETH balance:', uniswap.ethBalance)
-  console.log('        TKN balance:', uniswap.tokenBalance)
-  console.log('        TKN price:', uniswap.tokenRate, 'ETH')
-  console.log('        ETH price:', uniswap.ethRate, 'TKN')
+  console.log('        IFY balance:', uniswap.tokenBalance)
+  console.log('        IFY price:', uniswap.tokenRate, 'ETH')
+  console.log('        ETH price:', uniswap.ethRate, 'IFY')
   console.log('')
   console.log('    Duoswap Details')
   console.log('        ETH balance:', duoswap.ethBalance)
-  console.log('        TKN balance:', duoswap.tokenBalance)
-  console.log('        TKN price:', duoswap.tokenRate, 'ETH')
-  console.log('        ETH price:', duoswap.ethRate, 'TKN')
+  console.log('        IFY balance:', duoswap.tokenBalance)
+  console.log('        IFY price:', duoswap.tokenRate, 'ETH')
+  console.log('        ETH price:', duoswap.ethRate, 'IFY')
   console.log('')
   console.log('    Noob Details')
   console.log('        ETH balance:', noob.ethBalance)
-  console.log('        TKN balance:', noob.tokenBalance)
+  console.log('        IFY balance:', noob.tokenBalance)
   console.log('')
   console.log('    Pro Details')
   console.log('        ETH balance:', pro.ethBalance)
-  console.log('        TKN balance:', pro.tokenBalance)
+  console.log('        IFY balance:', pro.tokenBalance)
   console.log('')
 }
 
@@ -63,7 +63,7 @@ const depositEth = ({ user, pool, ethInputAmount }) => {
   const { tokenOutputAmount } = pool.exchangeEthForToken({ ethInputAmount })
   user.ethBalance -= ethInputAmount
   user.tokenBalance += tokenOutputAmount
-  console.log(`=> ${user.name} deposited ${ethInputAmount} ETH in exchange for ${tokenOutputAmount} TKN on ${pool.name}`)
+  console.log(`=> ${user.name} deposited ${ethInputAmount} ETH in exchange for ${tokenOutputAmount} IFY on ${pool.name}`)
   console.log('')
 }
 
@@ -71,7 +71,7 @@ const depositToken = ({ user, pool, tokenInputAmount }) => {
   const { ethOutputAmount } = pool.exchangeTokenForEth({ tokenInputAmount })
   user.tokenBalance -= tokenInputAmount
   user.ethBalance += ethOutputAmount
-  console.log(`=> ${user.name} deposited ${tokenInputAmount} TKN in exchange for ${ethOutputAmount} ETH on ${pool.name}`)
+  console.log(`=> ${user.name} deposited ${tokenInputAmount} IFY in exchange for ${ethOutputAmount} ETH on ${pool.name}`)
   console.log('')
 }
 
